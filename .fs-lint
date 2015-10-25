@@ -1,0 +1,17 @@
+{
+  "rules": [{
+    "files": [
+      "src/**",
+      "test/helpers/**",
+      "test/*"
+    ],
+    "naming": "lowercase_underscore",
+    "level": "error"
+  }, {
+    "files": [
+      "bin/**"
+    ],
+    "naming": "lowercase-dash",
+    "level": "error"
+  }]
+}

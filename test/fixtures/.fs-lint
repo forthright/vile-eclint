@@ -1,0 +1,9 @@
+{
+  "rules": [{
+    "files": [
+      "**"
+    ],
+    "naming": "lowercase_underscore",
+    "level": "error"
+  }]
+}
