@@ -22,26 +22,30 @@ let eclint_check = (files) =>
     let stream = gulp
       .src(files)
       .pipe(eclint.check({
-        reporter: (file, message) =>
-          issues.push(vile.issue(
-            vile.ERROR,
-            path.relative(".", file.path),
-            message.replace(LINE_NUMBER, ""),
-            { line: eclint_line(message) }
-          ))
+        reporter: (file, message) => {
+          let title = message.replace(LINE_NUMBER, "")
+          issues.push(vile.issue({
+            type: vile.STYL,
+            path: path.relative(".", file.path),
+            title: title,
+            message: title,
+            signature: `eclint::${title}`,
+            where: { start: { line: eclint_line(message) } }
+          }))
+        }
       }))
       .on("finish", () => resolve(issues))
 
     stream.resume()
   })
 
-let get_all_files = (config) =>
+let get_all_allowed_files = (config) =>
   new Promise((resolve, reject) => {
+    // TODO: use a bluebird helper
     let all_files = []
-    let ignore = _.get(config, "ignore", [])
     return vile.promise_each(
       process.cwd(),
-      allowed(ignore),
+      allowed(_.get(config, "ignore", [])),
       (filepath) => all_files.push(filepath),
       { read_data: false }
     )
@@ -49,7 +53,7 @@ let get_all_files = (config) =>
   })
 
 let punish = (config) =>
-  get_all_files(config).then(eclint_check)
+  get_all_allowed_files(config).then(eclint_check)
 
 module.exports = {
   punish: punish
