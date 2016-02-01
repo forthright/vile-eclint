@@ -11,6 +11,19 @@ A [vile](http://vile.io) plugin for [eclint](https://github.com/jedmao/eclint).
 
     npm i vile-eclint
 
+## Config
+
+`eclint` uses your `.editorconfig` file in the `cwd`.
+
+## Ingore
+
+`vile.ignore` is used as a base, but you can add onto it like so:
+
+```yaml
+eclint:
+  ignore: [ "a/**", "b" ]
+```
+
 ## Licensing
 
 This project is licensed under the [MPL](https://www.mozilla.org/MPL/2.0) license.
