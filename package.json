@@ -22,7 +22,7 @@
     "bluebird": "^3.3.0",
     "eclint": "^1.1.5",
     "gulp": "^3.9.1",
-    "lodash": "^4.3.0"
+    "lodash": "^3.10.1"
   },
   "devDependencies": {
     "babel-cli": "^6.5.1",
