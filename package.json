@@ -16,7 +16,8 @@
     "test": "bin/test",
     "test-cov": "bin/test-cov",
     "update": "ncu -u",
-    "vile": "vile p -usi --nodecorations"
+    "vile": "vile p -usi --nodecorations",
+    "release-it": "release-it"
   },
   "dependencies": {
     "bluebird": "^3.4.1",
