@@ -37,9 +37,9 @@
     "istanbul": "^0.4.5",
     "mimus": "^0.2.3",
     "mocha": "^3.2.0",
-    "npm-check-updates": ">=2.8.9",
+    "npm-check-updates": ">=2.10.2",
     "pryjs": "^1.0.3",
-    "release-it": "^2.5.3",
+    "release-it": "^2.5.4",
     "sinon": "^1.17.7",
     "sinon-chai": "^2.8.0"
   },
