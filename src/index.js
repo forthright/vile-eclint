@@ -23,14 +23,23 @@ let eclint_check = (files) =>
       .src(files)
       .pipe(eclint.check({
         reporter: (file, message) => {
-          let title = message.replace(LINE_NUMBER, "")
+          let title, where
+
+          // HACK
+          if (_.isString(message)) {
+            title = message.replace(LINE_NUMBER, "")
+            where = { start: { line: eclint_line(message) } }
+          } else {
+            title = _.get(message, "message", "?")
+          }
+
           issues.push(vile.issue({
             type: vile.STYL,
             path: path.relative(".", file.path),
             title: title,
             message: title,
             signature: `eclint::${title}`,
-            where: { start: { line: eclint_line(message) } }
+            where: where
           }))
         }
       }))
