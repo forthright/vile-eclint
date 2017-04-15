@@ -25,12 +25,15 @@ let eclint_check = (files) =>
         reporter: (file, message) => {
           let title, where
 
-          // HACK
+          // HACK: look into this later
           if (_.isString(message)) {
             title = message.replace(LINE_NUMBER, "")
             where = { start: { line: eclint_line(message) } }
           } else {
+            let line = _.get(message, "lineNumber");
+            let col = _.get(message, "columnNumber");
             title = _.get(message, "message", "?")
+            where = { start: { line: line, character: col } };
           }
 
           issues.push(vile.issue({
