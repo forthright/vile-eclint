@@ -1,6 +1,6 @@
 {
   "name": "vile-eclint",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "A vile plugin for eclint",
   "main": "lib/index.js",
   "files": [
