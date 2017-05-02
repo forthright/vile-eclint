@@ -3,7 +3,7 @@ let eclint = require("eclint")
 let gulp = require("gulp")
 let Promise = require("bluebird")
 let _ = require("lodash")
-let vile = require("@forthright/vile")
+let vile = require("vile")
 
 const LINE_NUMBER = /line\s(\d{1,})\s?:?\s?/
 

@@ -9,7 +9,7 @@ A [vile](http://vile.io) plugin for [eclint](https://github.com/jedmao/eclint).
 
 ## Installation
 
-    npm i vile-eclint
+    npm i -D vile vile-eclint
 
 ## Config
 
@@ -24,11 +24,43 @@ eclint:
   ignore: [ "a/**", "b" ]
 ```
 
+## Versioning
+
+This project ascribes to [semantic versioning](http://semver.org).
+
 ## Licensing
 
-This project is licensed under the [MPL](https://www.mozilla.org/MPL/2.0) license.
+This project is licensed under the [MPL-2.0](LICENSE) license.
 
 Any contributions made to this project are made under the current license.
+
+## Contributions
+
+Current list of [Contributors](https://github.com/forthright/vile-eclint/graphs/contributors).
+
+Any contributions are welcome and appreciated!
+
+All you need to do is submit a [Pull Request](https://github.com/forthright/vile-eclint/pulls).
+
+1. Please consider tests and code quality before submitting.
+2. Please try to keep commits clean, atomic and well explained (for others).
+
+### Issues
+
+Current issue tracker is on [GitHub](https://github.com/forthright/vile-eclint/issues).
+
+Even if you are uncomfortable with code, an issue or question is welcome.
+
+### Code Of Conduct
+
+This project ascribes to [contributor-covenant.org](http://contributor-covenant.org).
+
+By participating in this project you agree to our [Code of Conduct](CODE_OF_CONDUCT.md).
+
+### Maintainers
+
+- Brent Lintner - [@brentlintner](http://github.com/brentlintner)
+
 
 ## Hacking
 
