@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "bluebird": "^3.5.0",
-    "eclint": "^2.1.0",
+    "eclint": "^2.2.0",
     "gulp": "^3.9.1",
     "lodash": "^4.17.4"
   },
