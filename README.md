@@ -1,11 +1,10 @@
 # vile-eclint
 
-A [vile](http://vile.io) plugin for [eclint](https://github.com/jedmao/eclint).
+A [Vile](http://vile.io) plugin for tracking [EditorConfig](http://editorconfig.org) violations and errors (via [ECLint](https://github.com/jedmao/eclint)).
 
 ## Requirements
 
-- [nodejs](http://nodejs.org)
-- [npm](http://npmjs.org)
+- [Node.js](http://nodejs.org)
 
 ## Installation
 
@@ -21,12 +20,14 @@ A [vile](http://vile.io) plugin for [eclint](https://github.com/jedmao/eclint).
 
 ```yaml
 eclint:
-  ignore: [ "a/**", "b" ]
+  ignore:
+    - "a/**"
+    - b
 ```
 
 ## Versioning
 
-This project ascribes to [semantic versioning](http://semver.org).
+This project uses [Semver](http://semver.org).
 
 ## Licensing
 
@@ -53,8 +54,6 @@ Even if you are uncomfortable with code, an issue or question is welcome.
 
 ### Code Of Conduct
 
-This project ascribes to [contributor-covenant.org](http://contributor-covenant.org).
-
 By participating in this project you agree to our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ### Maintainers
@@ -62,54 +61,8 @@ By participating in this project you agree to our [Code of Conduct](CODE_OF_COND
 - Brent Lintner - [@brentlintner](http://github.com/brentlintner)
 
 
-## Hacking
+## Developing
 
     cd vile-eclint
     npm install
     npm test
-
-To run compile task with file watch in the background:
-
-    npm run dev
-
-To run tests with coverage:
-
-    npm run test-cov
-
-See `package.json` for other available scripts.
-
-## Versioning
-
-This project ascribes to [semantic versioning](http://semver.org).
-
-## Contributions
-
-Current list of [Contributors]().
-
-Any contributions are welcome and appreciated!
-
-All you need to do is submit a [Pull Request]().
-
-1. Please consider tests and code quality before submitting.
-2. Please try to keep commits clean, atomic and well explained (for others).
-
-### Issues
-
-Current issue tracker is on [GitHub]().
-
-Even if you are uncomfortable with code, an issue or question is welcome.
-
-### Code Of Conduct
-
-This project ascribes to CoralineAda's [Contributor Covenant](https://github.com/CoralineAda/contributor_covenant).
-
-### Maintainers
-
-- Brent Lintner - [@brentlintner](http://github.com/brentlintner)
-
-## Architecture
-
-- `src` is es6+ syntax compiled with [Babel](https://babeljs.io)
-- `lib` generated js library
-- `test` is any test code, written in [CoffeeScript](http://coffeescript.org)
-- `.test` where coffeescript is generated to

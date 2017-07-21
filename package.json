@@ -1,7 +1,7 @@
 {
   "name": "vile-eclint",
   "version": "0.1.14",
-  "description": "A vile plugin for eclint",
+  "description": "Track EditorConfig violations and errors.",
   "main": "lib/index.js",
   "files": [
     "lib",
